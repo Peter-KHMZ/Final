@@ -1,0 +1,90 @@
+.secondary-color
+{
+    background-color: #f2da8c;
+    
+}
+.dominant-color
+{
+    background-color: #1e3640;
+    color: #f9f9f9;
+}
+.btn-brown
+{
+    background-color: #eec230;
+   
+}
+.hover:hover
+{
+    background-color:#eec230;
+}
+.footer-1
+{
+    list-style: none;
+    display: inline-flex;
+    /* float: left; */
+    /* padding: 5px; */
+    text-decoration: none;
+    /* text-align: center; */
+    /* margin-left: 30%; */
+    
+}
+.hover{
+    margin: 2px;
+}
+
+	th
+	{
+        background-color: #eec230;
+		color:#1e3640;
+		font-size:15px;
+		font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	}
+	td
+	{
+		font-family: 'Century Gothic';
+		font-size:15px;
+		/* text-align: center; */
+		padding: 2px;
+		/* vertical-align: middle; */
+		
+    }
+    tr:hover
+    {
+        background-color: rgba(30, 54, 64, .8);
+        color: #eec230;
+        font-weight: bold;
+    }
+    .panel-headings
+    {
+        background-color:#1e3640;
+        color: #eec230;
+        font-weight: bold;
+    }
+
+.action ul li a:hover, .actived{
+    color: #666;
+    background-color: #eec230;
+    display: block;
+    margin: 0;
+}
+.footer ul{
+    padding: 0;
+    margin: 0;
+}
+.footer ul li{
+    list-style: none;
+    text-align: left;
+}
+.footer ul li a{
+    text-decoration: none;
+    color: #ccc;
+    transition: all ease 0.3s;
+}
+.footer ul li a:hover{
+    color: #eec230;
+    letter-spacing: 1px;
+}
+.info{
+    text-decoration: none;
+}
+   

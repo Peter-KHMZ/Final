@@ -1,0 +1,118 @@
+
+<div class="container">
+    <header class="w3-display-container w3-content w3-center" style="max-width:1500px">
+        <img class="w3-image" src="/public/img/house.jpg" alt="Me" style="height:400px"width="100%">
+        <div class="w3-display-middle w3-padding-large w3-border w3-wide w3-text-light-grey w3-center">
+            <h1 class="w3-hide-medium w3-hide-small w3-xxxlarge" style="color: #eec230;">YOUR HOME SAFETY IS GUARANTEED</h1>
+            <h5 class="w3-hide-large" style="white-space:nowrap" style="color: #359D94;">your home safety is guarenteed</h5>
+            <h3 class="w3-hide-medium w3-hide-small" style="color:#1e3640; font-weight:bold">With MakeR Company</h3>
+        </div>
+    </header>
+  <br>
+  <br>
+</div>
+  <div class="container">
+    <div class="row">
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-8">
+            <form action="/add" id="form2" method="POST">
+                <div class="input-group mb3">
+                    <input type="text" class="form-control" name="houseID" placeholder="House ID..." required>
+                       <select name="houseControl" id="" class="custom-select mb3" required>
+                            <option value="" selected>House Control</option>
+                            <option value="Partial Control">Partial Control</option>
+                            <option value="Full Control">Full Control</option>
+                       </select>
+                </div>
+                <br>
+                <div class="form-group">
+                    <textarea name="houseAddress" id="" placeholder="House's Address" rows="2" class="form-control"></textarea>
+                </div>
+                <br>
+                <div class="input-group mb3">
+                    <input type="text" class="form-control" name="ownerFN" placeholder="Owner's First Name">
+                    <input type="text" class="form-control" name="ownerLN" placeholder="Owner's Last  Name">
+                </div>
+                <br>
+                <div class="input-group mb3">
+                    <input type="text" class="form-control" name="ownerTel" placeholder="Owner's Telephone">
+                    <input type="text" class="form-control" name="ownerEmail" placeholder="Owner'sname@domain.com">
+                </div>
+                <br>
+                <div class="form-group">
+                    <textarea name="ownerAdd" id="" placeholder="Owner's Address" rows="2" class="form-control"></textarea>
+                </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <div class="w3-container">
+                    <button style="width:80px; height:80px" type="submit" class="w3-button w3-xlarge w3-circle w3-teal w3-card-4 w3-display-bottomright">  +  </button>
+                </div>
+               
+            </form>
+        </div>
+        <div class="col-md-2">
+        </div>
+    </div> 
+    <br>
+    <br>
+    <div class="container-fluid m-0 p-0">
+        <table class="table table-bordered table-hover new pb-5 m-0">
+        {{!-- <caption class="if">Students registration</caption><br> --}}
+        <thead class="td">
+            <th>House ID</th>
+            <th>House Control</th>
+            <th>House's Adress</th>
+            <th>Owner's Names</th>
+            <th>Phone</th>
+            <th>Email</th>
+            <th>Address</th>
+            <th></th>
+        </thead>
+        {{!-- <tfoot class="td">
+            <th>-</th>
+            <th>-</th>
+            <th>-</th>
+            <th>-</th>
+            <th>-</th>
+            <th>-</th>
+            <th>-</th>
+            <th>Available</th>
+        </tfoot> --}}
+        <tbody id="mytable">
+           {{#each this.data}}
+                    <tr>
+                        <td>{{this.houseID}}</td>
+                        <td>{{this.houseControl}}</td>
+                        <td>{{this.houseAddress}}</td>
+                        <td>{{this.ownerFN}}</td>
+                        {{!-- <td>{{this.ownerLN}}</td> --}}
+                        <td class="w3-right-align">{{this.ownerTel}}</td>
+                        <td>{{this.ownerEmail}}</td>
+                        <td>{{this.ownerAdd}}</td>
+                        <td>
+                            <a href="/course/{{this._id}}" class="">Edit</a>
+                            <a href="/delete?id={{this._id}}" class="" onclick="return confirm('Are you sure to delete this record? continue')">Delete</a>
+                            <a href="./control" onclick="document.getElementById('houseID').innerHTML='Hey'" class="">Control</a>
+                            {{!-- '/delete?id=#{item["_id"]}', onclick='return confirm("You are going to delete this record. continue?")' --}}
+                            </td>
+                    </tr>
+                {{/each}}
+        </tbody>
+     </table>
+  </div>
+{{!-- <div class="container col-md-12 p-3">
+    <input class="form-control" style="width: 30%;" id="inputSearch" type="text" placeholder="Search....">
+        <div class="btn-group w3-display-bottomright m-3">
+            <button type="button" class="btn btn-info"><a href="" style="text-decoration: none;">Edit</a></button>
+            <button type="button" class="btn btn-danger"><a href="" style="text-decoration: none;" >Delete</a></button>
+            <button type="submit" hre class="btn btn-default"><a style="text-decoration: none;" href="./control">Control</a></button>
+        </div>
+</div> --}}
+<br>
+<br>
+</div>
+ 
+  

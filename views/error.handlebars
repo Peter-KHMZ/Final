@@ -1,0 +1,12 @@
+<style>
+  #nav,#nav1,#footer{
+    display: none;
+  }
+</style>
+<div class="w3-center">
+    <h1 class="" style="font-family: 'Old English Text MT'; font-size:200px;">{{error.status}}</h1>
+    <h2 class="">{{message}}</h2>
+    <p style="font-family: 'script mt'; font-size:20px">The webpage might be temporarily down or it may have moved permanently to a new web address</p>
+{{!-- <pre>{{error.stack}}</pre> --}}
+<a id="btn" class="btn btn-secondary" onclick="location = this.url" jsselect="reload" jsvalues=".url:reloadUrl;.innerHTML:btnReload" onselectstart="return false;" jstcache="6">Reload page</a>
+</div>

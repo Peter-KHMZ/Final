@@ -1,0 +1,69 @@
+
+ <h2 class="w3-center">Login</h2>
+<br>
+<style>
+  #nav,#nav1,#footer{
+    display: none;
+  }
+</style>
+
+
+  {{> messages }}
+
+<div class="w3-container">
+
+  <div id="id01" class="">
+    <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:600px">
+  
+      <div class="w3-center"><br>
+        <img src="/public/img/Avatar/img_avatar4.png" alt="Avatar" style="width:30%" class="w3-circle w3-margin-top">
+        {{#each recent}}
+          {{username}}
+        {{/each}}
+      </div>
+
+      <form class="w3-container needs-validation" method="POST" action="/auth/login" novalidate>
+        <div class="w3-section">
+          <label><b>Username</b></label>
+          <input class="w3-input w3-border w3-margin-bottom form-control" type="text" placeholder="Enter Username" id="username" name="username" required>
+          {{!-- <div class="valid-feedback">Valid.</div> --}}
+          <div class="invalid-feedback">Please fill out this field.</div>
+          <label><b>Password</b></label>
+          <input class="w3-input w3-border form-control" type="password" placeholder="Enter Password" id="password" name="password" required>
+          {{!-- <div class="valid-feedback">Valid.</div> --}}
+          <div class="invalid-feedback">Please fill out this field.</div>
+          <button class="w3-button w3-block w3-green w3-section w3-padding" type="submit">Login</button>
+          <input class="w3-check w3-margin-top" type="checkbox" checked="checked"> Remember me
+        </div>
+      </form>
+
+      <div class="w3-container w3-border-top w3-padding-16 w3-light-grey">
+        {{!-- <button onclick="document.getElementById('id01').style.display='none'" type="button" class="w3-button w3-red">Cancel</button> --}}
+        <span class="w3-right w3-padding w3-hide-small">Want to <a href="/auth/register">Register?</a></span>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<script>
+// Disable form submissions if there are invalid fields
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Get the forms we want to add validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
+</script

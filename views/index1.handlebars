@@ -1,0 +1,79 @@
+<div class="container-fluid">
+
+<style>
+  #nav,#nav1,#footer{
+    display: none;
+  }
+</style>
+<header class="w3-container w3-red w3-center" style="padding:128px 16px">
+  <h1 class="w3-margin w3-hide-small" style="font-family: berlin sans fb;">WECOME TO MAKER COMAPNY ENTRANCE PORTAL</h1>
+  <h1 class="w3-margin w3-jumbo" style="font-family: berlin sans fb;">START PAGE</h1>
+  <p><a class="btn btn-info" name="login" style="width:160px;" href="/auth/login">Login</a></p>
+  <p><a class="btn btn-success" style="width:160px;" href="/auth/register">Register</a></p>
+</header>
+<br>
+<div class="w3-center w3-card-4" style="">
+  <h2 style="font-family: berlin sans fb;">3 latest users connected:</h2>
+<ul>
+{{#each recent}}
+  <li style="text-decoration: none; list-style:none; background-color:#1e3640; color: white; width:200px; border-radius:5px">
+    <a style="font-family:'century gothic'; font-weight:bold" href="/users/{{username}}">{{username}}</a>
+  </li>
+{{/each}}
+</ul>
+<br>
+<br><br>
+</div>
+<br>
+<br><br>
+<div class="container-fluid" >
+  <div class="row" style="align-content:center">
+    <div class="col-sm-4 col-md-2 col-lg-2" style="width: 100px; ">
+      <img class="card-img-top img-fluid" src="/public/img/New imgs/pic/3DStudio.png" width="100%" alt="3DStudio">
+      <div class="card-body" style="font-family: script mt;">
+         <h2>3DStudio</h2>
+       </div>
+    </div>
+    <div class="col-sm-4 col-md-2 col-lg-2" style="width: 100px; ">
+        <img class="card-img-top img-fluid" src="/public/img/New imgs/pic/Angular.png" width="100%" alt="Angular">
+        <div class="card-body" style="font-family: script mt;">
+         <h2>Angular</h2>
+       </div>
+    </div>
+     <div class=" col-sm-4 col-md-2 col-lg-2" style="width: 100px;">
+        <img class="card-img-top img-fluid" src="/public/img/New imgs/pic/c++.png" width="100%" alt="C++">
+        <div class="card-body" style="font-family: script mt;">
+          <h2>C++</h2>
+       </div>
+    </div>
+    <div class=" col-sm-4 col-md-2 col-lg-2" style="width: 100px;">
+       <img class="card-img-top img-fluid" src="/public/img/New imgs/pic/android.png" width="100%" alt="Android">
+       <div class="card-body" style="font-family: script mt;">
+         <h2>Android</h2>
+       </div>
+    </div>
+    <div class="col-sm-4 col-md-2 col-lg-2" style="width: 100px;">
+        <img class="card-img-top img-fluid" src="/public/img/New imgs/pic/ptython.png" width="100%" alt="Python">
+        <div class="card-body" style="font-family: script mt;">
+         <h2>Python</h2>
+       </div>
+    </div>
+    <div class="col-sm-4 col-md-2 col-lg-2" style="width: 100px;">
+        <img class="card-img-top img-fluid" src="/public/img/New imgs/pic/javascripts.png" width="100%" alt="JavaScripts">
+        <div class="card-body" style="font-family: script mt;">
+         <h2>JavaScripts</h2>
+       </div>
+    </div>
+
+    
+  <div class="col-sm-6" style="width:150px">
+    <img src="/public/img/New imgs/pic/appStore.png" width="100%" alt="appstore">
+  </div>
+    
+  <div class="col-sm-6" style="width: 150px;">
+    <img src="/public/img/New imgs/pic/playStore.png" class="float-right" width="100%" alt="playStore">
+  </div>
+
+  </div>
+</div>
+</div>

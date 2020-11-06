@@ -1,0 +1,131 @@
+<div class="container">
+    <h4 class="text-center" style="color: #1e3640;">TECHNICIANS PORTAL</h4>
+    <div class="row">
+        <br>
+        <div class="col-md-6 col-sm-12">
+            <img class="featurette-image img-fluid mx-auto card" src="/public/img/New imgs/img (6).jpeg" alt="worker's image">
+        </div>
+       
+        <div class="col-md-6 col-sm-12">
+             <form action="/adds" id="form1" method="POST" class="needs-validation" novalidate>
+                <div class="input-group mb3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Identities: </span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="First Name" id="firstName" name="firstName" required>
+                    <input type="text" class="form-control" placeholder="Last  Name" id="lastName"  name="lastName" required>
+                    <input type="text" class="form-control" placeholder="Sirname"    id="sirname"   name="sirname" required>
+                    {{!--  --}}
+                    <div class="valid-feedback" style="font-family: 'script mt';font-size:15px">Validated</div>
+                    <div class="invalid-feedback w3-center" style="font-family: 'script mt';">Please fill out these fields.</div>
+                </div>
+                <br>
+                <div class="input-group mb3">
+                    <select id="speciality" name="speciality" class="custom-select mb3" required>
+                        <option value="" selected>Select your specialty</option>
+                        <option value="Computer Science">Computer Science</option>
+                        <option value="Electromics">Electromics</option>
+                        <option value="Electricity">Electricity</option>
+                        <option value="Mecanic">Mecanic</option>
+                        <option value="polyvalent" id="speciality">polyvalent</option>
+                    </select>
+                    <input type="text" class="form-control" id="telephone" name="telephone" placeholder="078 - 915 - 8306" required>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="yournames@domain.com" required>
+                    <div class="valid-feedback" style="font-family: 'script mt';font-size:15px">Validated</div>
+                    <div class="invalid-feedback w3-center" style="font-family: 'script mt';">Please fill out these fields.</div>
+
+                </div>
+    
+                <br>
+                <div class="form-group">
+                    <textarea name="address" id="address" placeholder="Address" rows="5" class="form-control" required></textarea>
+                    <div class="valid-feedback" style="font-family: 'script mt';font-size:15px">Validated</div>
+                    <div class="invalid-feedback w3-center" style="font-family: 'script mt'; font-size:20px">Please fill out this field.</div>
+
+                </div>
+                <br>
+                <br>
+                <button class="btn" type="submit" name="sub" style="width:160px; background-color:#eec230; color:#1e3640;font-family:'segoe UI'; font-weight:bold; font-size:20px" >Save</button>
+                <br>
+                <br>
+            </form>
+            <input class="form-control" id="inputSearch" type="text" placeholder="Find....">
+            <br>
+        </div>
+
+        <div class="table-responsive">
+            <table class="table table-bordered new">
+                <thead class="td">
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Sirname</th>
+                    <th>specialty</th>
+                    <th>Email</th>
+                    <th>Telephone</th>
+                    <th>Address</th>
+                    <th></th>
+                    
+                </thead>
+                <tbody id="mytable">
+                {{#each this.data}}
+                    <tr>
+                        <td>{{this.firstName}}</td>
+                        <td>{{this.lastName}}</td>
+                        <td>{{this.sirname}}</td>
+                        <td>{{this.speciality}}</td>
+                        <td>{{this.email}}</td>
+                        <td class="w3-right-align">{{this.telephone}}</td>
+                        <td>{{this.address}}</td>
+                        <td>
+                            <a href="/course/{{this._id}}">Edit</a>
+                            <a href="/delete?id={{this._id}}" onclick="return confirm('Are you sure to delete this record? continue')">Delete</a>
+                            {{!-- '/delete?id=#{item["_id"]}', onclick='return confirm("You are going to delete this record. continue?")' --}}
+                            </td>
+                    </tr>
+                {{/each}}
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>
+
+<script>
+// Disable form submissions if there are invalid fields
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Get the forms we want to add validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
+</script>
+
+
+{{!-- <select name="" id="special">
+    <option value="one">1</option>
+    <option value="two">2</option>
+    <option value="three">3</option>
+</select>
+
+ <p id="New"></p>
+ <button type="button" onclick="dis()">Click</button>     
+            <script>
+                function dis(){
+                    var obj= document.getElementById("speciality"); 
+                    var r = obj.options[obj.selectedIndex].text;
+                        //   document.write(obj.options[obj.selectedIndex].text)
+                    document.getElementById('New').innerHTML = r;
+                }
+                            //onclick="dis()"
+            </script> --}}

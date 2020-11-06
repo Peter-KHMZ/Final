@@ -1,0 +1,366 @@
+<br>
+<br>
+<br>
+<div class="container">
+    <h3 id="houseID" name="houseID" >{{this.houseID}}</h3>
+    <div class="row" id="accordion">
+        {{!-- panel one --}}
+        <div class="col-md-6">
+            <div class="card w3-card-4">
+                <div class="card-header text-white text-center" style="background-color:#1e3640; font-weight:bold;">
+                    <a class="collapsed card-link " data-toggle="collapse" href="#collapseOne">
+                        LIGHT CONTROLLER
+                    </a>
+                </div>
+                <div id="collapseOne" class="collapse" data-parent="#accordion">
+                    <div class="card-body">
+                     {{!-- LIGHT inside panel control  --}}
+                        <div class="w3-card-4" style="width:80%;margin-left:10%;">
+                            <header class="w3-container" style="background-color: #eec230;">
+                                <h3 class="text-center">BED ROOMS</h3>
+                            </header>
+                            <div class="w3-container">
+                                <p>Light Status: <label style="font-weight: bold;" for=""id="offLabel1"></label></p>
+                                <hr>
+                               <a href=""><img src="/public/img/bulbon.gif" alt="Avatar"   class="w3-left w3-margin-right"  id="bulbon1" style="width:40px;height:60px;"></a>
+                               <a href=""><img src="/public/img/bulboff.gif"  alt="avatar" class="w3-left w3-margin-right"  id="bulboff1" style="width:40px;height:60px;margin-left:-55px"></a>
+                                <p>Here you are controlling all the bulbs in rooms.Click on the bulb to switch on/off</p><br>
+                                <div class="btn-group">
+                                    <button class="btn btn-danger btn-sm" id="btnOn1"    onclick="document.getElementById('offLabel1').innerHTML='ON'"      style="margin-bottom: 5px;">ON</button>
+                                    <button class="btn btn-default btn-sm" id="btnOff1"  onclick="document.getElementById('offLabel1').innerHTML='OFF'"     style="margin-bottom: 5px;border: 1px solid #000000;">OFF</button>
+
+                                </div>
+                            </div>
+                
+                        </div>
+                        <hr>
+                        {{!-- LIGHT inside panel control  --}}
+                        <div class="w3-card-4" style="width:80%;margin-left:10%">
+                            <header class="w3-container " style="background-color: #eec230;">
+                                <h3 class="text-center">DINNER ROOMS</h3>
+                            </header>
+                            <div class="w3-container ">
+                                <p>Light Status: <label style="font-weight: bold;" for=""id="offLabel2"></label></p>
+                                <hr>
+                                <a href=""><img src="/public/img/bulbon.gif"   alt="Avatar" class="w3-left w3-margin-right"  id="bulbon2"style="width:40px;height:60px;"></a>
+                                <a href=""><img src="/public/img/bulboff.gif"  alt="avatar" class="w3-left w3-margin-right"  id="bulboff2"style="width:40px;height:60px;margin-left:-55px"></a>
+                                <p>Here you are controlling all the bulbs in living rooms.Click on the bulb to switch on/off</p><br>
+                                <div class="btn-group">
+                                    <button class="btn btn-danger btn-sm"  id="btnOn2"    onclick="document.getElementById('offLabel2').innerHTML='ON'"      style="margin-bottom: 5px;">ON</button>
+                                    <button class="btn btn-default btn-sm" id="btnOff2"   onclick="document.getElementById('offLabel2').innerHTML='OFF'"     style="margin-bottom: 5px;border: 1px solid #000000;">OFF</button>
+
+                                </div>
+                            </div>
+                
+                        </div>
+                        <hr>
+
+                        {{!-- LIGHT inside panel control  --}}
+                        <div class="w3-card-4" style="width:80%;margin-left:10%">
+                            <header class="w3-container" style="background-color: #eec230;">
+                                <h3 class="text-center">OUTSIDE</h3>
+                            </header>
+                            <div class="w3-container">
+                                <p>Light Status: <label style="font-weight: bold;" for=""id="offLabel"></label></p>
+                                <hr>
+                                <a href="" id="lightlink1"><img src="/public/img/bulbon.gif"  alt="Avatar" class="w3-left w3-margin-right"   id="bulbon" style="width:40px;height:60px;"></a>
+                                <a href="" id="lightlink2"><img src="/public/img/bulboff.gif" alt="Avatar" class="w3-left w3-margin-right"   id="bulboff" style="width:40px;height:60px;margin-left:-55px"></a>
+                                <p>Apart form the auto switch of the outer light you can switch them manuelly.</p><br>
+                                <div class="btn-group">
+                                    <button class="btn btn-danger btn-sm" id="btnOn"    onclick="document.getElementById('offLabel').innerHTML='ON'"      style="margin-bottom: 5px;">ON</button>
+                                    <button class="btn btn-default btn-sm" id="btnOff"  onclick="document.getElementById('offLabel').innerHTML='OFF'"     style="margin-bottom: 5px;border: 1px solid #000000;">OFF</button>
+
+                                </div>
+                            </div>
+                
+                        </div>
+                        <hr>
+                        
+                        {{!-- Aisle Control --}}
+
+                        <div class="w3-card-4" style="width:80%;margin-left:10%">
+                            <header class="w3-container" style="background-color: #eec230;">
+                                <h3 class="text-center">AISLES LIGHT</h3>
+                            </header>
+                            <div class="w3-container">
+                                <p>Light Status: <label style="font-weight: bold;" for=""id="offLabel3"></label></p>
+                                <hr>
+                                <a href="" id="lightlink1"><img src="/public/img/bulbon.gif"  alt="Avatar" class="w3-left w3-margin-right"   id="bulbon3" style="width:40px;height:60px;"></a>
+                                <a href="" id="lightlink2"><img src="/public/img/bulboff.gif" alt="Avatar" class="w3-left w3-margin-right"   id="bulboff3" style="width:40px;height:60px;margin-left:-55px"></a>
+                                <p>Apart form the auto switch of the outer light you can switch them manuelly.</p><br>
+                                <div class="btn-group">
+                                    <button class="btn btn-danger btn-sm" id="btnOn3"    onclick="document.getElementById('offLabel3').innerHTML='ON'"      style="margin-bottom: 5px;">ON</button>
+                                    <button class="btn btn-default btn-sm" id="btnOff3"  onclick="document.getElementById('offLabel3').innerHTML='OFF'"     style="margin-bottom: 5px;border: 1px solid #000000;">OFF</button>
+
+                                </div>
+                            </div>
+                
+                        </div>
+                        <hr>
+                        {{!-- Kitchens --}}
+
+                        <div class="w3-card-4" style="width:80%;margin-left:10%">
+                            <header class="w3-container" style="background-color: #eec230;">
+                                <h3 class="text-center">KITCHENS LIGHT</h3>
+                            </header>
+                            <div class="w3-container">
+                                <p>Light Status: <label style="font-weight: bold;" for=""id="offLabel4"></label></p>
+                                <hr>
+                                <a href="" id="lightlink1"><img src="/public/img/bulbon.gif"  alt="Avatar" class="w3-left w3-margin-right"   id="bulbon4" style="width:40px;height:60px;"></a>
+                                <a href="" id="lightlink2"><img src="/public/img/bulboff.gif" alt="Avatar" class="w3-left w3-margin-right"   id="bulboff4" style="width:40px;height:60px;margin-left:-55px"></a>
+                                <p>Apart form the auto switch of the outer light you can switch them manuelly.</p><br>
+                                <div class="btn-group">
+                                    <button class="btn btn-danger btn-sm" id="btnOn4"    onclick="document.getElementById('offLabel4').innerHTML='ON'"      style="margin-bottom: 5px;">ON</button>
+                                    <button class="btn btn-default btn-sm" id="btnOff4"  onclick="document.getElementById('offLabel4').innerHTML='OFF'"     style="margin-bottom: 5px;border: 1px solid #000000;">OFF</button>
+
+                                </div>
+                            </div>
+                
+                        </div>
+                        <hr>
+
+                        {{!-- Wash rooms --}}
+
+                        <div class="w3-card-4" style="width:80%;margin-left:10%">
+                            <header class="w3-container" style="background-color: #eec230;">
+                                <h3 class="text-center">WASH ROOMS</h3>
+                            </header>
+                            <div class="w3-container">
+                                <p>Light Status: <label style="font-weight: bold;" for=""id="offLabel5"></label></p>
+                                <hr>
+                                <a href="" id="lightlink1"><img src="/public/img/bulbon.gif"  alt="Avatar" class="w3-left w3-margin-right"   id="bulbon5" style="width:40px;height:60px;"></a>
+                                <a href="" id="lightlink2"><img src="/public/img/bulboff.gif" alt="Avatar" class="w3-left w3-margin-right"   id="bulboff5" style="width:40px;height:60px;margin-left:-55px"></a>
+                                <p>Apart form the auto switch of the outer light you can switch them manuelly.</p><br>
+                                <div class="btn-group">
+                                    <button class="btn btn-danger btn-sm" id="btnOn5"    onclick="document.getElementById('offLabel5').innerHTML='ON'"      style="margin-bottom: 5px;">ON</button>
+                                    <button class="btn btn-default btn-sm" id="btnOff5"  onclick="document.getElementById('offLabel5').innerHTML='OFF'"     style="margin-bottom: 5px;border: 1px solid #000000;">OFF</button>
+
+                                </div>
+                            </div>
+                
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+        </div>
+        {{!-- panel two --}}
+        <div class="col-md-6">
+            <div class="card w3-card-4">
+                <div class="card-header text-white text-center" style="background-color:#1e3640; font-weight:bold;">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
+                        DOOR CONTROLLER
+                    </a>
+                </div>
+                <div id="collapseTwo" class="collapse" data-parent="#accordion">
+                   {{!-- Gate Panel control --}}
+                     <div class="w3-card-4" style="width:80%;margin-left:10%;margin-top:5px; margin-bottom:5px ">
+                        <header class="w3-container" style="background-color: #eec230;">
+                            <h3 class="text-center">GATE</h3>
+                        </header>
+                        <div class="w3-container">
+                            <img src="/public/img/log/gate.png" alt="gate icon">
+                            <div class="w3-right">
+                                <p>Gate Control</p>
+                                <h3 id="gateLabel"></h3>
+                            </div>
+                            <hr>
+                            <div class="btn-group">
+                                <button class="btn btn-success btn-sm"  id="gateOpen" onclick="document.getElementById('gateLabel').innerHTML='Opened'"      style="margin-bottom: 5px;">OPEN</button>
+                                <button class="btn btn-warning btn-sm text-white" id="gateClose"  onclick="document.getElementById('gateLabel').innerHTML='Closed'"     style="margin-bottom: 5px;">CLOSE</button>
+                                <button class="btn btn-danger  btn-sm" id="gateFree"  onclick="document.getElementById('gateLabel').innerHTML='Security removed'"     style="margin-bottom: 5px;">REMOVE SECURITY</button>
+                            </div>
+                        </div>
+                
+                    </div>
+                    <hr>
+                {{!-- Door control panel --}}
+                <div class="w3-card-4" style="width:80%;margin-left:10%;margin-top:5px; margin-bottom:5px ">
+                        <header class="w3-container" style="background-color: #eec230;">
+                            <h3 class="text-center">DOOR</h3>
+                        </header>
+                        <div class="w3-container">
+                            <img src="/public/img/log/door.png" alt="gate icon">
+                            <div class="w3-right">
+                                <p>Main Door Control</p>
+                                <h3 id="doorLabel"></h3>
+                            </div>
+                            <hr>
+                            <div>
+                                <input type="range" class="custom-range" min="0" max="180">
+                            </div>
+                            <br>
+                            <div class="btn-group">
+                                <button class="btn btn-success btn-sm"  id="doorOpen" onclick="document.getElementById('doorLabel').innerHTML='Opened'"      style="margin-bottom: 5px;">OPEN</button>
+                                <button class="btn btn-warning btn-sm text-white" id="doorClosed"  onclick="document.getElementById('doorLabel').innerHTML='Closed'"     style="margin-bottom: 5px;">CLOSE</button>
+                                <button class="btn btn-danger  btn-sm" id="doorFree"  onclick="document.getElementById('doorLabel').innerHTML='Security removed'"     style="margin-bottom: 5px;">REMOVE SECURITY</button>
+                            </div>
+                        </div>
+                
+                    </div>
+                    <hr>
+                    {{!-- Garage door control panel --}}
+                    <div class="w3-card-4" style="width:80%;margin-left:10%;margin-top:5px; margin-bottom:5px ">
+                        <header class="w3-container" style="background-color: #eec230;">
+                            <h3 class="text-center">GARAGE</h3>
+                        </header>
+                        <div class="w3-container">
+                            <img src="/public/img/log/garage.png" alt="gate icon">
+                            <div class="w3-right">
+                                <p>Garage door Control</p>
+                                <h3 id="garageLabel"></h3>
+                            </div>
+                            <hr>
+                            <div class="btn-group">
+                                <button class="btn btn-success btn-sm"  id="garageOpen" onclick="document.getElementById('garageLabel').innerHTML='Opened'"      style="margin-bottom: 5px;">OPEN</button>
+                                <button class="btn btn-warning btn-sm text-white" id="garageClosed"  onclick="document.getElementById('garageLabel').innerHTML='Closed'"     style="margin-bottom: 5px;">CLOSE</button>
+                                <button class="btn btn-danger  btn-sm" id="garageFree"  onclick="document.getElementById('garageLabel').innerHTML='Security removed'"     style="margin-bottom: 5px;">REMOVE SECURITY</button>
+                            </div>
+                        </div>
+                
+                    </div>
+                    <br>
+                </div>
+            </div>
+            <br>
+        </div>
+        {{!-- panel three --}}
+        <div class="col-md-6">
+           <div  class="card w3-card-4 ">
+                <div class="card-header text-white text-center" style="background-color:#1e3640; font-weight:bold;">
+                    <a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
+                        AIR CONDITIONING</a>
+                </div>
+                <div id="collapseThree" class="collapse" data-parent="#accordion">
+                   
+                      <div class="w3-card-4" style="width:80%;margin-left:10%;margin-top:10px;margin-bottom:10px;">
+                        <header class="w3-container" style="background-color: #eec230;">
+                            <h3 class="text-center">FAN</h3>
+                        </header>
+                        <div class="w3-container">
+                            
+                            <img src="/public/img/log/fan.png" alt="fire avatar">
+                            <div class="w3-right">
+                                <p>You deserve also to live in a cool world</p>
+                                <h3 id="fanLabel"></h3>
+                            </div>
+                            <hr>
+                            <div class="btn-group">
+                                <button class="btn btn-success btn-sm"  id="fanStart" onclick="document.getElementById('fanLabel').innerHTML='Turning...'"      style="margin-bottom: 5px;">START</button>
+                                <button class="btn btn-danger btn-sm text-white" id="fanStop"  onclick="document.getElementById('fanLabel').innerHTML='OFF'"     style="margin-bottom: 5px;">STOP</button>
+                        
+                            </div>
+                        </div>
+                
+                    </div>
+
+                </div>
+            </div>
+            <br>
+        </div>
+        {{!-- panel four --}}
+        <div class="col-md-6">
+            <div class="card w3-card-4">
+                <div class="card-header text-white text-center" style="background-color:#1e3640; font-weight:bold;">
+                    <a href="#collapseFour" class="collapsed card-link" data-toggle="collapse">
+                        ALARM CONTROLLER</a>
+                </div>
+                <div id="collapseFour" class="collapse" data-parent="#accordion" style="margin-left:15%;margin-top:10px;margin-bottom:10px;">
+                    
+                    <div class="w3-card-4" style="width:80%;">
+                        <header class="w3-container" style="background-color: #eec230;">
+                            <h3 class="text-center">ALARMS</h3>
+                        </header>
+                        <div class="w3-container">
+                            <img src="/public/img/log/intrusion.png" alt="intrusion icon">
+                            <img src="/public/img/log/fire.png" alt="fire avatar">
+                            <img src="/public/img/log/steam.png" alt="smoke">
+                            <hr>
+                            <div class="btn-group">
+                                <button class="btn btn-success btn-sm"  id="" onclick="document.getElementById('offLabel1').innerHTML='ON'"      style="margin-bottom: 5px;">START</button>
+                                <button class="btn btn-warning btn-sm text-white" id=""  onclick="document.getElementById('offLabel1').innerHTML='OFF'"     style="margin-bottom: 5px;">RESTORE</button>
+                                <button class="btn btn-danger  btn-sm" id=""  onclick="document.getElementById('offLabel1').innerHTML='OFF'"     style="margin-bottom: 5px;">STOP</button>
+                            </div>
+                        </div>
+                
+                    </div>
+
+                </div>
+            </div>
+            <br>
+        </div>
+        {{!-- panel five --}}
+        <div class="col-md-6">
+            <div class="card w3-card-4">
+                <div class="card-header text-white text-center" style="background-color:#1e3640; font-weight:bold;">
+                    <a href="#collapseFive" class="collapsed card-link" data-toggle="collapse">
+                        INTRUSION DETECTION</a>
+                </div>
+                <div id="collapseFive" class="collapse" data-parent="#accordion">
+                    
+                      <div class="w3-card-4" style="width:80%; margin-left:10%;margin-top:10px;margin-bottom:10px;">
+                        <header class="w3-container" style="background-color: #eec230;">
+                            <h3 class="text-center">ALARMS</h3>
+                        </header>
+                        <div class="w3-container">
+                            <img src="/public/img/log/intrusion.png" alt="intrusion icon">
+                            <div class="w3-right w3-margin-right">
+                                <h3>Intruder(s) Detected</h3>
+                            </div>
+                            <hr>
+                            <div class="btn-group">
+                                <button class="btn btn-success btn-sm"  id="" onclick="document.getElementById('offLabel1').innerHTML='ON'"      style="margin-bottom: 5px;">START OVERWATCH</button>
+                                <button class="btn btn-warning btn-sm text-white" id=""  onclick="document.getElementById('offLabel1').innerHTML='OFF'"     style="margin-bottom: 5px;">RESTORE COUNTER</button>
+                                <button class="btn btn-danger  btn-sm" id=""  onclick="document.getElementById('offLabel1').innerHTML='OFF'"     style="margin-bottom: 5px;">STOP OVERWATCH</button>
+                            </div>
+                        </div>
+                
+                    </div>
+
+                </div>
+            </div>
+            <br>
+        </div>
+        {{!-- panel six --}}
+        <div class="col-md-6">
+           <div class="card w3-card-4">
+                <div class="card-header text-white text-center" style="background-color:#1e3640; font-weight:bold;">
+                    <a href="#collapseSix" class="collapsed card-link" data-toggle="collapse">
+                        SYSTEM REBOOT
+                    </a>
+                </div>
+                <div id="collapseSix" class="collapse" data-parent="#accordion" style="margin-left:15%;margin-top:10px;margin-bottom:10px;">
+                     <div class="w3-card-4" style="width:80%">
+                        <header class="w3-container" style="background-color: #eec230;">
+                            <h3 class="text-center">SYSTEM CONTROL</h3>
+                        </header>
+                        <div class="w3-container">
+                            <img src="/public/img/log/intrusion.png" alt="intrusion icon">
+                            <img src="/public/img/log/fire.png" alt="fire avatar">
+                            <img src="/public/img/log/steam.png" alt="smoke"><br>
+                            <label id="systemStateLabel" style="font-weight: bold;" class="text-center"></label>
+                            <hr>
+                            <div class="btn-group">
+                                <button class="btn btn-success btn-sm"  id="start" onclick="document.getElementById('systemStateLabel').innerHTML='SYSTEM IS UP'"      style="margin-bottom: 5px;">START</button>
+                                <button class="btn btn-warning btn-sm text-white" id="reboot"  onclick="document.getElementById('systemStateLabel').innerHTML='REBOOTING...'"     style="margin-bottom: 5px;">REBOOT</button>
+                                <button class="btn btn-danger  btn-sm" id="stop"  onclick="document.getElementById('systemStateLabel').innerHTML='SYSTEM IS DOWN'"     style="margin-bottom: 5px;">STOP</button>
+                            </div>
+                        </div>
+                
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<hr>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<script src="/public/js/jquery.min.js"></script>

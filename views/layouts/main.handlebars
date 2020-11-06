@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Home</title>
+    <link rel="stylesheet" href="/public/css/style.css">
+    <link rel="stylesheet" href="/public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/public/css/bootstraps.min.css">
+    <link rel="stylesheet" href="/public/css/w3.css">
+    <link rel="stylesheet" href="/public/font/ELEPHNTI.TTF">
+    <link rel="stylesheet" href="/public/font/BROADW.TTF">
+</head>
+<body>
+    
+
+    <div id="nav1" class="container-fluid p-0 w3-hide-small">
+        <div class="navbar navbar-expand-sm bg-light navbar-dark m-0">
+            <div class="container m-0 ">
+                {{!-- <div></div> --}}
+                <div class="navbar-header " style="margin-left: 100px;">
+                    <a href="#" class="navbar-brand" style="color: #1e3640; font-weight:bold; font-family:'lucida calligraphy'">MakeR Company™</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li class=""></li>
+                    <li class="nav-item">
+                        <button class="btn" style="background-color: #eec230;" data-toggle="modal" data-target="#notification">
+                            <img src="/public/img/log/notification.png" alt="bell" width="30px" height="30px">
+                            <span class="badge badge-light">+30</span>
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link hover" style="color: #1e3640;" href="#" data-toggle="modal" data-target="#firefighter">Firefighter</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link hover" style="color: #1e3640;" href="#" data-toggle="modal" data-target="#emergency">Emergency Call</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link hover" style="color: #1e3640;" href="#" data-toggle="modal" data-target="#police">Police</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link hover" style="color: #1e3640;" href="#" data-toggle="modal" data-target="#assistance">Assistance</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" style="color: #1e3640;" href="/users">Edit Profile</a></li>
+                </ul>
+                
+            </div>
+             <div class="w3-quarter m-0 p-0">
+                <a href="/users/{{username}}" ><img src="/public/img/Avatar/img_avatar4.png" alt="Boss" style="width:20%" class="w3-circle w3-hover-opacity w3-right"></a>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid p-0" style="margin-top: -70px;">
+        <br><br><br>
+        <nav class="navbar navbar-expand-sm m-0 col-xsm-12 dominant-color action" id="nav" style="margin-top: -10px;">
+            <div class="container-fluid col-xsm-12 ">
+
+                <ul class="nav navbar-nav" style="margin-left: 90px;">
+                    <li class="nav-item active" ><a class="nav-link" href="/home" style="color: white;">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../workers">Workers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="house">Houses</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="assistance">Customer Assistance</a></li>
+                </ul>
+            </div>
+            {{!-- <div class="w3-quarter">
+                <img src="/public/img/Avatar/img_avatar4.png" alt="Boss" style="width:20%" class="w3-circle w3-hover-opacity">
+            </div> --}}
+        </nav>
+    </div>
+    {{!--<br>
+    <br>
+    <br>
+    <br> --}}
+    {{!-- ===========================The Modal --}}
+                    {{!-- Police --}}
+    <div class="modal fade" id="police">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                {{!-- Modal Header --}}
+                <div class="modal-header">
+                    <h4 class="model-title">Call the Police</h4>
+                    <img src="/public/img/log/police.png" alt="police icon" width="40px" height="40px">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                {{!-- Modal Body --}}
+                <div class="modal-body">
+                    <img src="/public/img/log/phone.png" alt="phone icon" width="40px" height="40px">
+                    Call the Police on: 114
+                </div>
+                {{!-- Modal Footer --}}
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" style="background-color:#1e3640"data-dismiss="modal">Close</button>         
+                </div>
+            </div>
+        </div>
+    </div>
+                    {{!-- Notification --}}
+
+    <div class="modal fade" id="notification">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                {{!-- Modal Header --}}
+                <div class="modal-header">
+                    <h4 class="model-title">Notification</h4>
+                    <img src="/public/img/log/note.png" alt="police icon" width="50px" height="50px">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                {{!-- Modal Body --}}
+                <div class="modal-body">
+                <div class="container">
+                        <div class="alert alert-success alert-dismissible fade show">
+                            <button type="button" class="close" data-dismiss="alert">&times;</button>
+                            <strong>Success!</strong> Thank you MakeR for contributions everything goes perfect <a href="#" class="alert-link">read this message</a>.
+                        </div>
+                        <div class="alert alert-info alert-dismissible fade show">
+                            <button type="button" class="close" data-dismiss="alert">&times;</button>
+                            <strong>Info!</strong> Hello MakeR Co. I would like you to come and install your plateform for my new company find the add... <a href="#" class="alert-link">read this message</a>.
+                        </div>
+                        <div class="alert alert-warning alert-dismissible fade show">
+                            <button type="button" class="close" data-dismiss="alert">&times;</button>
+                            <strong>Warning!</strong> My application has crashed yesterday but now it's working perfectly, but outer lamps are not on <a href="#" class="alert-link">read this message</a>.
+                        </div>
+                        <div class="alert alert-danger alert-dismissible fade show">
+                            <button type="button" class="close" data-dismiss="alert">&times;</button>
+                            <strong>Danger!</strong> I have lost my phone and I would like to access my house, is it possible?? <a href="#" class="alert-link">read this message</a>.
+                        </div>
+                        <div class="alert alert-danger alert-dismissible fade show">
+                            <button type="button" class="close" data-dismiss="alert">&times;</button>
+                            <strong>Danger!</strong> Urgent!!My alarm is not responding responding, it is ringing without end.find something to do... please <a href="#" class="alert-link">read this message</a>.
+                        </div>
+                        <div class="alert alert-primary alert-dismissible fade show">
+                            <button type="button" class="close" data-dismiss="alert">&times;</button>
+                            <strong>Primary!</strong> The new technicians are now available <a href="#" class="alert-link">read this message</a>.
+                        </div>
+                        <div class="alert alert-secondary alert-dismissible fade show">
+                            <button type="button" class="close" data-dismiss="alert">&times;</button>
+                            <strong>Secondary!</strong> Mr. James, whose phone was stolen is back on the system <a href="#" class="alert-link">read this message</a>.
+                        </div>
+                        <div class="alert alert-dark alert-dismissible fade show">
+                            <button type="button" class="close" data-dismiss="alert">&times;</button>
+                            <strong>Dark!</strong> Andrew changed the address for his new house <a href="#" class="alert-link">read this message</a>.
+                        </div>
+                        <div class="alert alert-light">
+                            <strong>Light!</strong> click here on the link for older notifications <a href="#" class="alert-link">unfold</a>.
+                        </div>
+                    </div>
+                </div>
+                {{!-- Modal Footer --}}
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" style="background-color:#1e3640"data-dismiss="modal">Close</button>         
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    {{!-- Firefighter --}}
+
+    <div class="modal fade" id="firefighter">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content">
+                {{!-- Modal Header --}}
+                <div class="modal-header">
+                    <h4 class="model-title">Find the firefighters</h4>
+                    <img src="/public/img/log/firefighter.png" alt="police icon" width="50px" height="50px">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                {{!-- Modal Body --}}
+                <div class="modal-body">
+                    <img src="/public/img/log/phone.png" alt="phone icon" width="40px" height="40px">
+                    Assistance on: +1-007-345-1223
+                </div>
+                {{!-- Modal Footer --}}
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" style="background-color:#1e3640"data-dismiss="modal">Close</button>         
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    {{!-- Emergency --}}
+
+    <div class="modal fade" id="emergency">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content">
+                {{!-- Modal Header --}}
+                <div class="modal-header">
+                    <h4 class="model-title">Emergency</h4>
+                    <img src="/public/img/log/Emergency.png" alt="police icon" width="50px" height="50px">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                {{!-- Modal Body --}}
+                <div class="modal-body">
+                    <img src="/public/img/log/phone.png" alt="phone icon" width="40px" height="40px">
+                    Emergence on: +1-007-345-1223
+                </div>
+                {{!-- Modal Footer --}}
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" style="background-color:#1e3640"data-dismiss="modal">Close</button>         
+                </div>
+            </div>
+        </div>
+    </div>
+
+                    {{!-- Profile --}}
+
+    <div class="modal fade" id="assistance">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content">
+                {{!-- Modal Header --}}
+                <div class="modal-header">
+                    <h4 class="model-title">Assistance</h4>
+                    <img src="/public/img/log/assistance.png" alt="police icon" width="50px" height="50px">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                {{!-- Modal Body --}}
+                <div class="modal-body">
+                    <img src="/public/img/log/phone.png" alt="phone icon" width="40px" height="40px">
+                     Assistance on: +1-007-345-1223 
+                    <a href="/users/{{username}}">a</a>
+                </div>
+                {{!-- Modal Footer --}}
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" style="background-color:#1e3640"data-dismiss="modal">Close</button>         
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="container-fluid m-0 p-0">
+        <div class="">  
+               {{{body}}}
+        </div>
+    </div>
+    <footer id="footer" class="footer dominant-color">
+        <br>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 p-0 m-0">
+                    <h3 style="color:#eec230; font-family: 'script mt'">Who we are</h3>
+                    <hr class="featurette-divider">
+                    <ul>
+                        <li><a href="us" style="font-family: 'century gothic';">About Us</a></li>
+                        <li><a href="#" style="font-family: 'century gothic';">Contanct Us</a></li>
+                        <li ><a href="#" class="text-muted " style="font-family: 'century gothic';">Phone : (250) - 789 - 158 - 308 </a></li>
+                        <li><a  href="#" class="text-muted " style="font-family: 'century gothic';">Email  : makerLtd@gmail.com</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h3 style="color:#eec230; font-family: 'script mt'">Information</h3>
+                    <hr class="featurette-divider">
+                    <ul>
+                        <li><a href="about" style="font-family: 'century gothic';">About the site</a></li>
+                        <li class="disabled"><a href="#" class="btn disabled" style="font-family: 'century gothic';">Blog</a></li>
+                        <li><a href="#" id="testimony" class="btn disabled" style="font-family: 'century gothic';">Testimonials</a></li>
+                        <li><a href="#" id="events"  class="btn disabled" style="font-family: 'century gothic';">Events</a></li>
+                    </ul>
+
+                </div>
+                <div class="col-md-3">
+                    <h3 style="color:#eec230; font-family: 'script mt'">Helpful links</h3>
+                    <hr class="featurette-divider">
+                   <ul>
+                        <li class="disabled"><a href="#" id="services" class="btn disabled" style="font-family: 'century gothic';" >Services</a></li>
+                        <li class="disabled"><a href="#" id="supports" class="btn disabled" style="font-family: 'century gothic';">Supports</a></li>
+                        <li><a href="terms" id="terms_conditions"   style="font-family: 'century gothic';">Terms & Conditions</a></li>
+                        <li class="disabled"><a href="#" class="btn disabled" id="privacy_policies" style="font-family: 'century gothic';">Priavcy policies</a></li>
+
+                   </ul>                </div>
+                <div class="col-md-3">
+                    <h3 style="color:#eec230; font-family: 'script mt'">You and We</h3>
+                    <hr class="featurette-divider">
+                    <h6 style="color:#eec230; font-family:'script mt'">Subscribe For more info</h6>                     
+                    <div class="container-fluid m-0 p-0 mt-4">
+                        <div class="input-group mb-4 p-0">
+                            <div class="input-group-prepend ">
+                            <span class="input-group-text" style=""><img src="/public/img/log/env.png" height="20px" width="" alt="User icon"></span>
+                            </div>
+                            <input type="text" class="form-control"  placeholder="mak@404error.com">
+                        </div>
+                    </div>
+                    <input type="button" name="subscribe" class="btn btn-warning" id="" value="Subscribe" disabled>
+                </div>
+                
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-6 shadow p-3" id="myColor">
+                    <p class="text-center description small list" style="color: #777;"><a href="us" class="info" style="font-family: 'century gothic';">2020 &copy; MakeR Company.Ltd </a></p>
+                    <p class="text-center description small list" style="color: #777;"><a href="#" class="info" style="font-family: 'century gothic';">All rights reserved® </a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+   
+
+
+
+
+    <script src="/public/js/bootstrap.min.js"></script>
+    <script src="/public/js/jquery.min.js"></script>
+    <script src="/public/js/popper.min.js"></script>
+    <script>
+
+        $(document).ready( function(){
+            $("#inputSearch").on("keyup", function() {
+                var value = $(this).val().toLowerCase();
+                    $("#mytable tr").filter(function() {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+      
+        function myFunction(id) {
+        var x = document.getElementById(id);
+        if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+        } else { 
+            x.className = x.className.replace(" w3-show", "");
+        }
+        }
+        {{!-- this scripts is for the fadeIn/Out of button --}}
+        $(document).ready(function(){
+        $("#id1").click(function(){
+            $("#div1").fadeOut();
+            $("#id1").fadeOut();
+            $("#div2").fadeIn("slow");
+            $("#id2").fadeIn();
+        });
+        });
+        $(document).ready(function(){
+        $("#id2").click(function(){
+            $("#id1").fadeIn();
+            $("#id2").fadeOut();
+        });
+        });
+
+
+        {{!-- this scripts id for the fadeIn/On of the bulbs and their respective status --}}
+            {{!-- BedRoom Lamps --}}
+        $(document).ready(function(){
+        $("#btnOn1").click(function(){
+            $("#bulboff1").fadeOut(500);
+            $("#bulbon1").fadeIn(500);
+        });
+        });
+        $(document).ready(function(){
+        $("#btnOff1").click(function(){
+            $("#bulboff1").fadeIn(500);
+        });
+        });
+            {{!-- DinnerRoom Lamps --}}
+        $(document).ready(function(){
+        $("#btnOn2").click(function(){
+            $("#bulboff2").fadeOut(500);
+            $("#bulbon2").fadeIn(500);
+        });
+        });
+        $(document).ready(function(){
+        $("#btnOff2").click(function(){
+            $("#bulboff2").fadeIn(500);
+        });
+        });
+            {{!-- Outside Lamps --}}
+        $(document).ready(function(){
+        $("#btnOn").click(function(){
+            $("#bulboff").fadeOut(500);
+            $("#bulbon").fadeIn(500);
+        });
+        });
+
+        $(document).ready(function(){
+        $("#btnOff").click(function(){
+            $("#bulboff").fadeIn(500);
+        });
+        });
+
+         {{!-- Aisles Lamps --}}
+        $(document).ready(function(){
+        $("#btnOn3").click(function(){
+            $("#bulboff3").fadeOut(500);
+            $("#bulbon3").fadeIn(500);
+        });
+        });
+
+        $(document).ready(function(){
+        $("#btnOff3").click(function(){
+            $("#bulboff3").fadeIn(500);
+        });
+        });
+
+         {{!-- Kitchens Lamps --}}
+        $(document).ready(function(){
+        $("#btnOn4").click(function(){
+            $("#bulboff4").fadeOut(500);
+            $("#bulbon4").fadeIn(500);
+        });
+        });
+
+        $(document).ready(function(){
+        $("#btnOff4").click(function(){
+            $("#bulboff4").fadeIn(500);
+        });
+        });
+
+        {{!-- Wash Room Lamps --}}
+        $(document).ready(function(){
+        $("#btnOn5").click(function(){
+            $("#bulboff5").fadeOut(500);
+            $("#bulbon5").fadeIn(500);
+        });
+        });
+
+        $(document).ready(function(){
+        $("#btnOff5").click(function(){
+            $("#bulboff5").fadeIn(500);
+        });
+        });
+//Disable the form submissions if there are invalid field
+(
+    function()
+    {
+        'use strick';
+        window.addEventListener('load', function(){
+            //get the forms we want to add validation styles to
+            var forms = document.getElementsByClassName('need-validation');
+            //loop over them and prevent submission
+            var validation = Array.prototype.filter.call(forms, function(form){
+                form.addEventListener('submit', function(event){
+                    if(form.checkValidity() === false)
+                    {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            });
+        }, false);
+    }
+)();
+
+        $(function(){
+                $('.editlink').on('click', function(){
+                    var id = $(this).data('id');
+                    $.ajax({
+                        method: "GET",
+                        url: "/fetchdata",
+                        data: { id: id },
+                        }).done(function(data){
+                        var result = $.parseJson(data);
+                        $('#id').val(data[0]['_id']);
+                        $('#firstName').val(data[0]['firstName']);
+                        $('#lastName').val(data[0]['lastName']);
+                        $('#sirName').val(data[0]['sirName']);
+                        $('#speciality').val(data[0]['speciality']);
+                        $('#telephone').val(data[0]['telephone']);
+                        $('#email').val(data[0]['email']);
+                        $('#address').val(data[0]['address']);
+                        $('#subbtn').val('Edit Product');
+                        $('#form1').attr('action', '/edit');
+                    });
+                });
+            });
+    </script>
+</body>
+</html>

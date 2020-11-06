@@ -1,0 +1,90 @@
+<div class="container">
+    <h4 class="text-center" style="color: #1e3640;">CUSTOMER ASSISTANCE PORTAL</h4>
+    <div class="row">
+        <br>
+        <div class="col-md-6 col-sm-12">
+            <img class="featurette-image img-fluid mx-auto" src="/public/img/images (5).jpeg" alt="worker's image">
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <form action="/added" method="POST">
+                <div class="input-group mb3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Identities: </span>
+                    </div>
+                    <input type="text" name="FName" class="form-control" placeholder="First Name" required>
+                    <input type="text" name="LName" class="form-control" placeholder="Last  Name" required>
+                    <input type="text" name="Sname" class="form-control" placeholder="Sirname"    required>
+                </div>
+                <br>
+                <div class="input-group mb3">
+                    {{!-- <div class="input-group-prepend">
+                        <span class="input-group-text">Identities: </span>
+                    </div> --}}
+                    <select name="houseID" id="" class="custom-select mb3" required>
+                        <option value="" selected>Select HouseID</option>
+                        {{#each this.data}}
+                            <option value="{{this.houseID}}">{{this.houseID}}</option>
+                        {{/each}}
+                    </select>
+                    <input type="text" name="phone" class="form-control" placeholder="078 - 915 - 8306" required>
+                    <input type="text" name="mail" class="form-control" placeholder="yournames@domain.com" required>
+                </div>
+                <br>
+                <div class="form-group">
+                    <textarea name="addrss" id="" placeholder="Address" rows="5" class="form-control"></textarea>
+                </div>
+                <br>
+                <br>
+                <button class="btn" type="submit" style="width:160px; background-color:#eec230; color:#1e3640;font-family:'segoe UI'; font-weight:bold; font-size:20px" >Save</button>
+            </form>
+            <br>
+            <input class="form-control" id="inputSearch" type="text" placeholder="Find....">
+        </div>
+    </div>
+    <br>
+    
+    <div class="table-responsive">
+        <table class="table table-bordered new">
+        {{!-- <caption class="if">Students registration</caption><br> --}}
+        <thead class="td">
+            <th>First Name</th>
+            <th>Last  Name</th>
+            <th>Sirname</th>
+            <th>HouseID</th>
+            <th>Telephone</th>
+            <th>Email</th>
+            <th>Address</th>
+            <th>Status</th>
+        </thead>
+        {{!-- <tfoot class="td">
+            <th>-</th>
+            <th>-</th>
+            <th>-</th>
+            <th>-</th>
+            <th>-</th>
+            <th>-</th>
+            <th>-</th>
+            <th>Available</th>
+        </tfoot> --}}
+        <tbody id="mytable">
+            {{#each this.data}}
+                <tr>
+                    <td>{{this.FName}}</td>
+                    <td>{{this.LName}}</td>
+                    <td>{{this.Sname}}</td>
+                    <td>{{this.houseID}}</td>
+                    <td>{{this.phone}}</td>
+                    <td class="w3-right-align">{{this.mail}}</td>
+                    <td>{{this.addrss}}</td>
+                    <td>
+                        <a href="/course/{{this._id}}">Edit</a>
+                        <a href="/deleted?id={{this._id}}" onclick="return confirm('Are you sure to delete this record? continue')">Delete</a>
+                        
+                    </td>
+                </tr>
+                {{/each}}
+        </tbody>
+    </table>
+</div>
+
+</div>

@@ -1,0 +1,51 @@
+<br>
+<br>
+<h2 class="w3-center">Register a new user</h2>
+<style>
+  #nav,#nav1,#footer{
+    display: none;
+  }
+</style>
+ 
+  {{> messages }}
+
+<form action="/auth/register" method="POST" style="width: 500px;" class="container-fluid">
+
+  <div class="form-group" style="">
+    <label for="username">Username:</label>
+    <input type="text" class="form-control" name="username" id="username">
+    <div class="valid-feedback">Valid.</div>
+    <div class="invalid-feedback">Please fill out this field.</div>
+  </div>
+  <div class="form-group">
+    <label for="password">Password:</label>
+    <input type="password" class="form-control" name="password" id="password">
+    <div class="valid-feedback">Valid.</div>
+    <div class="invalid-feedback">Please fill out this field.</div>
+  </div>
+  <br>
+  <button type="submit" class="btn btn-success">Register</button>
+</form>
+
+<p class="w3-center">Or <a href="/auth/login">Login</a> if you already have an account.</p>
+
+<script>
+// Disable form submissions if there are invalid fields
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Get the forms we want to add validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
+</script>
